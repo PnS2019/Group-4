@@ -108,7 +108,7 @@ preds = np.argmax(model.predict(test_x_vis), axis=1).astype(np.int)
 labels = ["Tshirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal",
           "Shirt", "Sneaker", "Bag", "Ankle Boot"]
 
-plt.figure()
+plt.figure(figsize=(20, 20))
 for i in range(2):
     for j in range(5):
         plt.subplot(2, 5, i*5+j+1)
@@ -116,4 +116,5 @@ for i in range(2):
         plt.title("Ground Truth: %s, \n Prediction %s" %
                   (labels[ground_truths[i*5+j]],
                    labels[preds[i*5+j]]))
+plt.tight_layout()
 plt.show()
