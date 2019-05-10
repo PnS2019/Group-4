@@ -62,8 +62,8 @@ y = AveragePooling2D(pool_sizes[0], pool_strides[0])(y)
 
 y = Conv2D(num_kernels[2], kernel_sizes[2], activation='relu', kernel_initializer="he_normal")(y)
 y = BatchNormalization()(y)
-# y = Conv2D(num_kernels[3], kernel_sizes[3], activation='relu', kernel_initializer="he_normal")(y)
-# y = BatchNormalization()(y)
+y = Conv2D(num_kernels[3], kernel_sizes[3], activation='relu', kernel_initializer="he_normal")(y)
+y = BatchNormalization()(y)
 y = AveragePooling2D(pool_sizes[1], pool_strides[1])(y)
 
 y = Flatten()(y)
@@ -113,4 +113,4 @@ print('Test loss: ', test_score[0])
 print('Test accuracy: ', 100 * test_score[1])
 
 # save the model
-model.save("model/facial_expression_detection3.hdf5")
+# model.save("model/facial_expression_detection3.hdf5")
