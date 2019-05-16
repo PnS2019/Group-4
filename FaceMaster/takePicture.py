@@ -6,7 +6,7 @@ from face_detect import get_face
 from prediction import predict
 from tensorflow.keras.models import load_model
 
-model = load_model('../model/facial_expression_detection2.hdf5')
+model = load_model('/home/pi/Desktop/Group4/Group-4-master/FaceMaster/model/facial_expression_detection2.hdf5')
 camera = PiCamera()
 camera.resolution = (256,256)
 camera.framerate = 120
