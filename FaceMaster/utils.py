@@ -14,6 +14,6 @@ def get_face(img):
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
     (x, y, w, h) = faces[0]
     face = img[y:y+h, x:x+w]
-    face = cv2.resize(face, (80, 80), interpolation=cv2.INTER_CUBIC)
+    face = cv2.resize(face, (48, 48), interpolation=cv2.INTER_CUBIC)
     face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
     return face
