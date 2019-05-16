@@ -4,4 +4,5 @@
  3=fear,
  4=happy,
  5=sadness,
- 6=surprise
+ 6=surprise,
+ 7=neutral

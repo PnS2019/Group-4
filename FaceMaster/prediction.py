@@ -9,7 +9,7 @@ def predict(img, model):
     pred = model.predict(img)[0]
     emotion = emotions[np.argmax(model.predict(img), axis=1).astype(np.int)]
 
-    x = [i for i in range(8)]
+    x = [2*i for i in range(7)]
     plt.bar(x=x, height=pred, width=0.8, alpha=0.8, color='red', label="Prediction")
     plt.ylim(0, 1)
     plt.ylabel("Probability")

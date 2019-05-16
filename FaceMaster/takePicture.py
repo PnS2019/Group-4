@@ -6,7 +6,7 @@ from face_detect import get_face
 from prediction import predict
 from tensorflow.keras.models import load_model
 
-model = load_model('../model/facial_expression_detection3.hdf5')
+model = load_model('../model/facial_expression_detection2.hdf5')
 camera = PiCamera()
 camera.resolution = (256,256)
 camera.framerate = 120
@@ -27,7 +27,7 @@ for frame in camera.capture_continuous(rawCapture, format='bgr', use_video_port=
 			image = get_face(image)
 			cv2.imwrite('/home/pi/Desktop/FaceMasters/PiCameraPictures/Face/{}.png'.format(i), image)
 			print('Face detected')
-			image = image.reshape((1, 80, 80, 1))/255.
+			image = image.reshape((1, 48, 48, 1))/255.
 			predict(image, model)
 		except IndexError:
 			print('No face detected, please try again')
