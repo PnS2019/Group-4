@@ -4,12 +4,11 @@ import cv2
 
 def get_haarcascade_path(xml_name):
     """Get haar cascade path according to the given xml file."""
-    return os.path.join('/Users/xiaorui/Desktop/FaceMaster/haarcascades', xml_name)
+    return os.path.join('haarcascades', xml_name)
 
 
 def get_face(img):
-    face_cascade = cv2.CascadeClassifier(
-        get_haarcascade_path('haarcascade_frontalface_default.xml'))
+    face_cascade = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
     img = img.astype('uint8')
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
