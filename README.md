@@ -2,7 +2,7 @@
 
 ### Introduction
 
-A facial expressions recognition implemented by keras based on tensorflow, which can classify 8 emotions(anger, contempt, disgust, fear, happy, sadness, surprise and neutral). datasets used are CK+ and JAFFE.
+A facial expressions recognition implemented by keras based on tensorflow, which can classify 7 emotions(anger, contempt, disgust, fear, happy, sadness, and surprise). datasets used are CK+ and JAFFE.
 
 ### Dependencies
 
